@@ -1,0 +1,9 @@
+<p>Número de itens no carrinho: {{quantidadeCarrinho}}</p>
+<div>
+  <table style="width: 500px;">
+    <tr *ngFor="let produto of produtos">
+      <td style="text-align: left;">{{produto.id}} - {{produto.descricao}}</td>
+      <td style="text-align: right;"><button (click)="emitAddCarrinho(produto)">Add</button></td>
+    </tr>
+  </table>
+</div>

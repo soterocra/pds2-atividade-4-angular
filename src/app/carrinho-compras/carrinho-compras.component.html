@@ -1,0 +1,13 @@
+<h2>Carrinho de compras:</h2>
+
+<div>
+  <table style="width: 500px;">
+    <tr *ngFor="let carrinho of carrinhos">
+      <td style="text-align: left;">{{carrinho.id}} - {{carrinho.descricao}}</td>
+    </tr>
+  </table>
+</div>
+
+<h2>Compras</h2>
+
+<app-compras [produtos]="produtos" [quantidadeCarrinho]="quantidadeCarrinho" (produtoParaCarrinho)="addCarrinho($event)"></app-compras>
